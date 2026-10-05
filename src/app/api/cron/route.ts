@@ -1,6 +1,6 @@
-// Vercel Cron 用エンドポイント: 全アクティブ監視を1周（記録＋通知判断込み）
-// vercel.json の crons から GET で呼ばれる。CRON_SECRET 設定時は Vercel が
-// `Authorization: Bearer <CRON_SECRET>` を付与するため、それを検証する。
+// 定期実行エンドポイント: 全アクティブ監視を1周（記録＋通知判断込み）
+// .github/workflows/cron.yml（GitHub Actions の schedule）から Bearer トークン付きで
+// GET される。CRON_SECRET 設定時は `Authorization: Bearer <CRON_SECRET>` を検証する。
 import { loadConfig } from "../../../watcher/config.mts";
 import { makeNeonDb, Store } from "../../../watcher/store.mts";
 import { runAll } from "../../../watcher/watcher.mts";

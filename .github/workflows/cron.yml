@@ -1,0 +1,46 @@
+name: cron-vacancy-check
+
+# Vercel Hobby の cron が 1日1回固定のため、GitHub Actions (schedule) から
+# /api/cron を叩いて監視を実行する。
+# 必要な Repository secrets:
+#   CRON_SECRET : Vercel 側の CRON_SECRET 環境変数と同じ値
+#   CRON_URL    : 例 https://<your-app>.vercel.app/api/cron
+on:
+  schedule:
+    - cron: "0 * * * *" # 毎時0分（UTC）
+  workflow_dispatch: {} # 手動実行も許可（動作確認用）
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cron-vacancy-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Run /api/cron
+        env:
+          CRON_URL: ${{ secrets.CRON_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$CRON_URL" ]; then
+            echo "::error::Repository secret CRON_URL が未設定です" >&2
+            exit 1
+          fi
+          set -o pipefail
+          http_code=$(curl -sS --max-time 300 -w '%{http_code}' -o /tmp/resp.json \
+            -H "Authorization: Bearer ${CRON_SECRET}" "$CRON_URL") || {
+            echo "::error::リクエスト自体が失敗しました" >&2
+            cat /tmp/resp.json >&2
+            exit 1
+          }
+          echo "HTTP ${http_code}"
+          cat /tmp/resp.json
+          if [ "$http_code" != "200" ]; then
+            echo "::error::/api/cron が HTTP ${http_code} を返しました" >&2
+            exit 1
+          fi

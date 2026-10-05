@@ -9,7 +9,7 @@
 - Node.js 22+ / TypeScript（`node` が直接実行、トランスパイル不要）
 - 保存: Neon Postgres（`@neondatabase/serverless` の HTTP SQL。`fetch` のみで依存最小）
 - 通知: SMTP(nodemailer)。宛先は監視ごとに登録
-- スケジューラ: Vercel Cron（`/api/cron` を定期実行）
+- スケジューラ: GitHub Actions（`/.github/workflows/cron.yml` が `/api/cron` を定期実行。Vercel Hobby の cron は 1日1回固定のため外部発火に移行）
 
 ```
 src/watcher/
@@ -21,7 +21,7 @@ src/watcher/
   config.mts    # .env.local 読み込み
   tests/        # node:test（ネットワークなし・fixture使用）
 
-src/app/api/cron/route.ts  # Vercel Cron 用（全監視を1周）
+src/app/api/cron/route.ts  # 定期実行エンドポイント（全監視を1周）
 ```
 
 ## セットアップ
@@ -45,12 +45,11 @@ npm run dev                  # Web UI（監視の追加・削除・手動チェ�
 - 連続 `TOYOKO_MAX_FAILURES` 回の失敗でエラー通知。**403/429 は即全監視停止**（自動リトライ禁止）。
 - `TOYOKO_STOP_AFTER_NOTIFY=true` で通知後にその監視を停止（元サイト仕様の踏襲）。
 
-## Vercel Cron で定期チェック
+## GitHub Actions で定期チェック
 
-1. Vercel にデプロイし、環境変数 `DATABASE_URL` と `SMTP_*` を設定。
-2. `vercel.json` の cron（毎日 1回：`0 3 * * *` UTC = JST 正午）が `/api/cron` を呼び、全アクティブ監視を1周して通知判断します。
-3. 誤実行防止に `CRON_SECRET` を設定すると、Vercel が付与する `Authorization: Bearer` を検証します。
-4. Hobby プランは cron を**1日1回**に制限しています。より高頻度にする場合は Pro プランにするか、外部 cron から `GET /api/cron`（Bearer トークン付き）を呼び出してください。チェック間隔は**60分以上**を推奨。
+1. Vercel にデプロイし、環境変数 `DATABASE_URL` と `SMTP_*`、および `CRON_SECRET` を設定。
+2. リポジトリの Secrets に `CRON_URL`（例: `https://<your-app>.vercel.app/api/cron`）と `CRON_SECRET`（Vercel 側と同じ値）を登録。
+3. GitHub Actions（毎時0分 UTC）が Bearer トークン付きで GET を送り、全アクティブ監視を1周して通知判断します。手動実行（workflow_dispatch）も可能。
 
 ## 法務・マナー指針（必読）
 
