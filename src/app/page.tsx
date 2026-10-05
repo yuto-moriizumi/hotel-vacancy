@@ -67,10 +67,15 @@ export default async function Home() {
                     >
                       {w.active ? "監視中" : "停止中"}
                     </span>
-                    <span className="font-medium">
+                    <a
+                      className="font-medium underline-offset-2 hover:underline"
+                      href={`https://www.toyoko-inn.com/search/detail/${w.hotel_code}/`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {w.hotel_name ?? `ホテル ${w.hotel_code}`}
-                      <span className="ml-1 text-xs text-zinc-500">{w.hotel_code}</span>
-                    </span>
+                    </a>
+                    <span className="text-xs text-zinc-500">{w.hotel_code}</span>
                   </div>
                   <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
                     {w.checkin_date}〜（{w.nights}泊） / {w.rooms}室・{w.people}名 /{" "}
@@ -106,14 +111,6 @@ export default async function Home() {
                         削除
                       </button>
                     </form>
-                    <a
-                      className={`${btn} inline-block`}
-                      href={`https://www.toyoko-inn.com/search/detail/${w.hotel_code}/`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      公式サイトへ
-                    </a>
                   </div>
                 </li>
               );
