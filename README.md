@@ -48,7 +48,7 @@ npm run dev                  # Web UI（監視の追加・削除・手動チェ�
 
 ## Vercel Cron で定期チェック
 
-1. Vercel にデプロイし、環境変数 `DATABASE_URL` と `SMTP_*`、`TOYOKO_TO` を設定。
+1. Vercel にデプロイし、環境変数 `DATABASE_URL` と `SMTP_*` を設定。
 2. `vercel.json` の cron（毎日 1回：`0 3 * * *` UTC = JST 正午）が `/api/cron` を呼び、全アクティブ監視を1周して通知判断します。
 3. 誤実行防止に `CRON_SECRET` を設定すると、Vercel が付与する `Authorization: Bearer` を検証します。
 4. Hobby プランは cron を**1日1回**に制限しています。より高頻度にする場合は Pro プランにするか、外部 cron から `GET /api/cron`（Bearer トークン付き）を呼び出してください。チェック間隔は**60分以上**を推奨。

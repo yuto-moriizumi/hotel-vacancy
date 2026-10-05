@@ -32,7 +32,6 @@ export interface SmtpCfg {
 }
 export interface Config {
   dbUrl: string;
-  to: string;
   smtp: SmtpCfg;
   /** 通知後 active=false で停止（元サイト仕様の踏襲） */
   stopAfterNotify: boolean;
@@ -69,7 +68,6 @@ export function loadConfig(cwd = process.cwd()): Config {
   if (!dbUrl) throw new Error("DATABASE_URL is not set (.env.local)");
   return {
     dbUrl,
-    to: get("TOYOKO_TO") ?? get("SMTP_USER") ?? "",
     smtp: {
       host: get("SMTP_HOST") ?? "",
       port: num("SMTP_PORT", 465),

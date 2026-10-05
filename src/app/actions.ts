@@ -6,6 +6,7 @@ import { loadConfig, parseSmoking } from "../watcher/config.mts";
 import { makeNeonDb, Store } from "../watcher/store.mts";
 import { checkWatchOnce } from "../watcher/watcher.mts";
 import { isValidIsoDate } from "../watcher/fetcher.mts";
+import { HOTELS_BY_CODE } from "./hotels";
 
 export interface AddFormState {
   error: string | null;
@@ -19,8 +20,8 @@ function getStore(): Store {
 }
 
 export async function addWatchAction(_prev: AddFormState, formData: FormData): Promise<AddFormState> {
-  const hotel = String(formData.get("hotel") ?? "").trim();
-  const name = String(formData.get("name") ?? "").trim();
+  const hotel_code = String(formData.get("hotel") ?? "").trim();
+  const hotel_name = HOTELS_BY_CODE.get(hotel_code) ?? null;
   const start = String(formData.get("start") ?? "").trim();
   const nights = Number(formData.get("nights") ?? 1);
   const rooms = Number(formData.get("rooms") ?? 1);
@@ -28,7 +29,7 @@ export async function addWatchAction(_prev: AddFormState, formData: FormData): P
   const smoking = parseSmoking(String(formData.get("smoking") ?? "all"));
   const email = String(formData.get("email") ?? "").trim();
 
-  if (!/^\d{5}$/.test(hotel)) return { error: "ホテルコードは5桁の数字で入力してください（例: 00270）", ok: false, message: null };
+  if (!/^\d{5}$/.test(hotel_code) || !HOTELS_BY_CODE.has(hotel_code)) return { error: "ホテルを一覧から選択してください", ok: false, message: null };
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { error: "通知先メールアドレスを正しく入力してください", ok: false, message: null };
   if (!isValidIsoDate(start)) return { error: "チェックイン日を正しく指定してください", ok: false, message: null };
   const d = new Date(start + "T00:00:00Z");
@@ -40,7 +41,7 @@ export async function addWatchAction(_prev: AddFormState, formData: FormData): P
   try {
     const store = getStore();
     try {
-      const id = await store.addWatch({ hotel_code: hotel, hotel_name: name || null, checkin_date: start, nights, rooms, people, smoking, notify_to: email });
+      const id = await store.addWatch({ hotel_code: hotel_code, hotel_name: hotel_name, checkin_date: start, nights, rooms, people, smoking, notify_to: email });
       return { error: null, ok: true, message: `監視を登録しました（id=${id}）` };
     } finally {
       store.close();

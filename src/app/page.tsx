@@ -44,7 +44,7 @@ export default async function Home() {
       <section className="mt-8">
         <h2 className="text-lg font-medium">監視の登録</h2>
         <p className="mt-1 mb-3 text-xs text-zinc-500 dark:text-zinc-400">
-          ホテルコードは公式サイトのホテル詳細URL <code>/search/detail/{'{code}'}/</code> の5桁の番号です。
+          対象ホテルは公式サイトのホテル一覧（<a className="underline" href="https://www.toyoko-inn.com/hotel_list/" target="_blank" rel="noreferrer">toyoko-inn.com/hotel_list</a>）から選択できます。
         </p>
         <AddForm />
       </section>

@@ -79,7 +79,7 @@ export interface Watch {
   people: number;
   smoking: SmokingFilter;
   active: boolean;
-  /** 通知先メールアドレス（監視ごと。null なら config.to にフォールバック） */
+  /** 通知先メールアドレス（監視ごと。必須） */
   notify_to: string | null;
   created_at: string;
 }

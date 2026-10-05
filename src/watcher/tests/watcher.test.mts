@@ -58,7 +58,6 @@ class FakeStore implements StoreLike {
 
 const cfg: Config = {
   dbUrl: "postgres://x",
-  to: "",
   smtp: { host: "", port: 465, user: "", pass: "", from: "", secure: true },
   stopAfterNotify: false,
   delayMinMs: 0,

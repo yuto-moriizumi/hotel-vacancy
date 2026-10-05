@@ -41,8 +41,8 @@ export function formatErrorMessage(watch: Watch | null, msg: string): string {
 
 export async function notify(config: Config, kind: NotifyKind, subject: string, body: string, to?: string): Promise<void> {
   void kind;
-  const dest = to || config.to;
-  if (!config.smtp?.host || !dest) throw new Error("SMTP_HOST / 通知先メールアドレス（監視ごと または TOYOKO_TO）が未設定です");
+  const dest = to;
+  if (!config.smtp?.host || !dest) throw new Error("SMTP_HOST / 通知先メールアドレス（監視ごとの notify_to）が未設定です");
   const { createTransport } = await import("nodemailer");
   const tr = createTransport({
     host: config.smtp.host,
