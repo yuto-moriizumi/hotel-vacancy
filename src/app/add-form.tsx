@@ -114,7 +114,8 @@ export default function AddForm() {
         <label className={label} htmlFor="smoking">
           喫煙希望
         </label>
-        <select id="smoking" name="smoking" defaultValue="no_smoking" className={input}>
+        <select id="smoking" name="smoking" defaultValue="all" className={input}>
+          <option value="all">指定なし</option>
           <option value="no_smoking">禁煙</option>
           <option value="smoking">喫煙</option>
           <option value="all">指定なし</option>
