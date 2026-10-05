@@ -1,0 +1,536 @@
+{
+  "hotelCode": "00270",
+  "isKoreaHotel": false,
+  "hotelTitle": "Toyoko Inn Gumma Isesaki Ekimae",
+  "canReservation": true,
+  "isHotelBeforeOpen": false,
+  "openDate": "2017-06-20",
+  "hotelStatus": "operation",
+  "roomTypeList": [
+    {
+      "roomTypeId": "S",
+      "roomTypeName": "Single",
+      "roomTypeDescription": "",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 7200,
+            "membershipPrice": 6840
+          },
+          "vacant": {
+            "generalVacantRoom": 54,
+            "membershipVacantRoom": 54
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "SK",
+      "roomTypeName": "Single",
+      "roomTypeDescription": "",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 7200,
+            "membershipPrice": 6840
+          },
+          "vacant": {
+            "generalVacantRoom": 75,
+            "membershipVacantRoom": 75
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "PSK",
+      "roomTypeName": "Premium Plus Room",
+      "roomTypeDescription": "Experience a new level of comfort with exclusive amenities including Refa showerheads, hairdryers, Airweave mattresses, pillow and Sharp humidifying air purifiers.",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/a33f2520-a0f1-4276-8e09-faafc5752500/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "QW",
+      "roomTypeName": "King Double",
+      "roomTypeDescription": "",
+      "roomClassId": "20",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 15,
+        "widthOfBedA": 180,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 7,
+            "membershipVacantRoom": 7
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "QWK",
+      "roomTypeName": "King Double",
+      "roomTypeDescription": "",
+      "roomClassId": "20",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 15,
+        "widthOfBedA": 180,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 17,
+            "membershipVacantRoom": 17
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "T",
+      "roomTypeName": "Twin",
+      "roomTypeDescription": "",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 15,
+        "widthOfBedA": 110,
+        "numberOfBedA": 2,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 12,
+            "membershipVacantRoom": 12
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "TK",
+      "roomTypeName": "Twin",
+      "roomTypeDescription": "",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 15,
+        "widthOfBedA": 110,
+        "numberOfBedA": 2,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 26,
+            "membershipVacantRoom": 26
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "HTK",
+      "roomTypeName": "Accessible Twin Room",
+      "roomTypeDescription": "Accessible rooms designed to accommodate all guests comfortably.",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/ac252414-85b5-4366-7578-3e5fa6bc7500/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 25,
+        "widthOfBedA": 140,
+        "numberOfBedA": 1,
+        "widthOfBedB": 110,
+        "numberOfBedB": 1
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "Standard Package",
+          "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    }
+  ],
+  "planList": [
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+      ],
+      "planName": "Standard Package",
+      "detailedExplanation": "This is the standard package of Toyoko Inn.<br><br>・Reservations available for up to 7 nights.<br>・Free hearty breakfast included.<br>・Free bed-sharing for children under elementary school age (up to 1 child per bed, a charge applies if the child uses a separate bed).<br><br>*Please refer to the details of the <a href=\"/campaign/child/\">Free Bed-Sharing Service for Children</a> before using this service.",
+      "notes": "",
+      "planCode": "9901",
+      "smokingCategorize": "all",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "S",
+          "roomTypeName": "Single",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7200,
+            "membershipPrice": 6840
+          },
+          "vacant": {
+            "generalVacantRoom": 54,
+            "membershipVacantRoom": 54
+          }
+        },
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "Single",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7200,
+            "membershipPrice": 6840
+          },
+          "vacant": {
+            "generalVacantRoom": 75,
+            "membershipVacantRoom": 75
+          }
+        },
+        {
+          "roomTypeId": "PSK",
+          "roomTypeName": "Premium Plus Room",
+          "roomTypeDescription": "Experience a new level of comfort with exclusive amenities including Refa showerheads, hairdryers, Airweave mattresses, pillow and Sharp humidifying air purifiers.",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/a33f2520-a0f1-4276-8e09-faafc5752500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          }
+        },
+        {
+          "roomTypeId": "QW",
+          "roomTypeName": "King Double",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 7,
+            "membershipVacantRoom": 7
+          }
+        },
+        {
+          "roomTypeId": "QWK",
+          "roomTypeName": "King Double",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 17,
+            "membershipVacantRoom": 17
+          }
+        },
+        {
+          "roomTypeId": "T",
+          "roomTypeName": "Twin",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 12,
+            "membershipVacantRoom": 12
+          }
+        },
+        {
+          "roomTypeId": "TK",
+          "roomTypeName": "Twin",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 26,
+            "membershipVacantRoom": 26
+          }
+        },
+        {
+          "roomTypeId": "HTK",
+          "roomTypeName": "Accessible Twin Room",
+          "roomTypeDescription": "Accessible rooms designed to accommodate all guests comfortably.",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/ac252414-85b5-4366-7578-3e5fa6bc7500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 25,
+            "widthOfBedA": 140,
+            "numberOfBedA": 1,
+            "widthOfBedB": 110,
+            "numberOfBedB": 1
+          },
+          "price": {
+            "generalPrice": 9700,
+            "membershipPrice": 9215
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          }
+        }
+      ]
+    }
+  ],
+  "planCodeList": [
+    {
+      "name": "Standard Package",
+      "code": "9901"
+    }
+  ]
+}

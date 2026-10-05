@@ -1,0 +1,1440 @@
+{
+  "hotelCode": "00270",
+  "isKoreaHotel": false,
+  "hotelTitle": "東横INN群馬伊勢崎駅前",
+  "canReservation": true,
+  "isHotelBeforeOpen": false,
+  "openDate": "2017-06-20",
+  "hotelStatus": "operation",
+  "roomTypeList": [
+    {
+      "roomTypeId": "S",
+      "roomTypeName": "シングル",
+      "roomTypeDescription": "",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 6700,
+            "membershipPrice": 6365
+          },
+          "vacant": {
+            "generalVacantRoom": 22,
+            "membershipVacantRoom": 22
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 10,
+            "membershipVacantRoom": 10
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/cb112cb6-795d-456b-1bdd-35c4f7458400/public"
+          ],
+          "planName": "駐車場確約!!宿泊プラン",
+          "detailedExplanation": "＜駐車場付でお車の移動を応援！＞<br>通常「先着順」となる駐車場の「確約」が付いた限定プランです。<br>駐車可能時間は15時～翌10時です。（時間外は別途料金がかかります）<br><br>※車高、車幅、長さ制限がございます。詳細はホテルにお問い合わせください。<br>※到着されましたらフロントまでお声がけください。<br>※自動チェックイン機はご利用いただけません。",
+          "notes": "※自動チェックイン機はご利用いただけません。",
+          "planCode": "3274",
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 2,
+            "membershipVacantRoom": 2
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "SK",
+      "roomTypeName": "シングル",
+      "roomTypeDescription": "",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 6700,
+            "membershipPrice": 6365
+          },
+          "vacant": {
+            "generalVacantRoom": 33,
+            "membershipVacantRoom": 33
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 10,
+            "membershipVacantRoom": 10
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+          ],
+          "planName": "学割プラン",
+          "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+          "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+          "planCode": "3259",
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 33,
+            "membershipVacantRoom": 33
+          },
+          "smokingCategorize": "noSmoking",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/cb112cb6-795d-456b-1bdd-35c4f7458400/public"
+          ],
+          "planName": "駐車場確約!!宿泊プラン",
+          "detailedExplanation": "＜駐車場付でお車の移動を応援！＞<br>通常「先着順」となる駐車場の「確約」が付いた限定プランです。<br>駐車可能時間は15時～翌10時です。（時間外は別途料金がかかります）<br><br>※車高、車幅、長さ制限がございます。詳細はホテルにお問い合わせください。<br>※到着されましたらフロントまでお声がけください。<br>※自動チェックイン機はご利用いただけません。",
+          "notes": "※自動チェックイン機はご利用いただけません。",
+          "planCode": "3274",
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "PSK",
+      "roomTypeName": "プレミアムプラスルーム",
+      "roomTypeDescription": "「Refa」シャワーヘッド、ヘアドライヤー、カールアイロン、「エアウィーヴ」のベッドマット、ピロー、「SHARP」空気清浄機ワンランク上のアイテムを常設した室数限定のお部屋です。",
+      "roomClassId": "10",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/a33f2520-a0f1-4276-8e09-faafc5752500/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 12,
+        "widthOfBedA": 150,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+          ],
+          "planName": "学割プラン",
+          "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+          "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+          "planCode": "3259",
+          "price": {
+            "generalPrice": 7110,
+            "membershipPrice": 6754
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          },
+          "smokingCategorize": "noSmoking",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "QW",
+      "roomTypeName": "キングダブル",
+      "roomTypeDescription": "",
+      "roomClassId": "20",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 15,
+        "widthOfBedA": 180,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 6,
+            "membershipVacantRoom": 6
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 10200,
+            "membershipPrice": 9690
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "QWK",
+      "roomTypeName": "キングダブル",
+      "roomTypeDescription": "",
+      "roomClassId": "20",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 15,
+        "widthOfBedA": 180,
+        "numberOfBedA": 1,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 18,
+            "membershipVacantRoom": 18
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 10200,
+            "membershipPrice": 9690
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+          ],
+          "planName": "学割プラン",
+          "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+          "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+          "planCode": "3259",
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 18,
+            "membershipVacantRoom": 18
+          },
+          "smokingCategorize": "noSmoking",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "T",
+      "roomTypeName": "ツイン",
+      "roomTypeDescription": "",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+      ],
+      "specs": {
+        "isSmoking": true,
+        "roomSize": 15,
+        "widthOfBedA": 110,
+        "numberOfBedA": 2,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 11,
+            "membershipVacantRoom": 11
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 11200,
+            "membershipPrice": 10640
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "TK",
+      "roomTypeName": "ツイン",
+      "roomTypeDescription": "",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 15,
+        "widthOfBedA": 110,
+        "numberOfBedA": 2,
+        "widthOfBedB": null,
+        "numberOfBedB": null
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 25,
+            "membershipVacantRoom": 25
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+          ],
+          "planName": "早朝出発プラン（10％OFF）",
+          "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+          "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+          "planCode": "3335",
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+          ],
+          "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+          "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+          "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+          "planCode": "3256",
+          "price": {
+            "generalPrice": 11200,
+            "membershipPrice": 10640
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+          ],
+          "planName": "学割プラン",
+          "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+          "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+          "planCode": "3259",
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 25,
+            "membershipVacantRoom": 25
+          },
+          "smokingCategorize": "noSmoking",
+          "membershipCategorize": "all"
+        }
+      ]
+    },
+    {
+      "roomTypeId": "HTK",
+      "roomTypeName": "ハートフルツイン",
+      "roomTypeDescription": "どなたでも便利に利用できるよう設計されたユニバーサルデザインのお部屋です。",
+      "roomClassId": "30",
+      "imageUrls": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/ac252414-85b5-4366-7578-3e5fa6bc7500/public"
+      ],
+      "specs": {
+        "isSmoking": false,
+        "roomSize": 25,
+        "widthOfBedA": 140,
+        "numberOfBedA": 1,
+        "widthOfBedB": 110,
+        "numberOfBedB": 1
+      },
+      "plans": [
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+          ],
+          "planName": "スタンダードプラン",
+          "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+          "notes": "",
+          "planCode": "9901",
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          },
+          "smokingCategorize": "all",
+          "membershipCategorize": "all"
+        },
+        {
+          "planImages": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+          ],
+          "planName": "学割プラン",
+          "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+          "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+          "planCode": "3259",
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          },
+          "smokingCategorize": "noSmoking",
+          "membershipCategorize": "all"
+        }
+      ]
+    }
+  ],
+  "planList": [
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/b1c45893-fb48-4cb8-6b66-a74ab50f7700/public"
+      ],
+      "planName": "スタンダードプラン",
+      "detailedExplanation": "東横INNのスタンダードなプランです。<br>・7泊まで予約可能<br>・小学生以下のお子様添い寝無料（1ベッド/1人まで、お子様のみのベッド利用は有料）<br><br>※添い寝される場合は、<a href=\"/campaign/child/\">お子様添い寝無料サービス</a>の詳細をご確認の上ご利用ください。<br><br><a href=\"https://www.toyoko-inn.com/campaign/breakfast/\">無料の元気朝食サービス付き</a><br><br>",
+      "notes": "",
+      "planCode": "9901",
+      "smokingCategorize": "all",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "S",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 6700,
+            "membershipPrice": 6365
+          },
+          "vacant": {
+            "generalVacantRoom": 22,
+            "membershipVacantRoom": 22
+          }
+        },
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 6700,
+            "membershipPrice": 6365
+          },
+          "vacant": {
+            "generalVacantRoom": 33,
+            "membershipVacantRoom": 33
+          }
+        },
+        {
+          "roomTypeId": "PSK",
+          "roomTypeName": "プレミアムプラスルーム",
+          "roomTypeDescription": "「Refa」シャワーヘッド、ヘアドライヤー、カールアイロン、「エアウィーヴ」のベッドマット、ピロー、「SHARP」空気清浄機ワンランク上のアイテムを常設した室数限定のお部屋です。",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/a33f2520-a0f1-4276-8e09-faafc5752500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          }
+        },
+        {
+          "roomTypeId": "QW",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 6,
+            "membershipVacantRoom": 6
+          }
+        },
+        {
+          "roomTypeId": "QWK",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8200,
+            "membershipPrice": 7790
+          },
+          "vacant": {
+            "generalVacantRoom": 18,
+            "membershipVacantRoom": 18
+          }
+        },
+        {
+          "roomTypeId": "T",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 11,
+            "membershipVacantRoom": 11
+          }
+        },
+        {
+          "roomTypeId": "TK",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 25,
+            "membershipVacantRoom": 25
+          }
+        },
+        {
+          "roomTypeId": "HTK",
+          "roomTypeName": "ハートフルツイン",
+          "roomTypeDescription": "どなたでも便利に利用できるよう設計されたユニバーサルデザインのお部屋です。",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/ac252414-85b5-4366-7578-3e5fa6bc7500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 25,
+            "widthOfBedA": 140,
+            "numberOfBedA": 1,
+            "widthOfBedB": 110,
+            "numberOfBedB": 1
+          },
+          "price": {
+            "generalPrice": 9200,
+            "membershipPrice": 8740
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          }
+        }
+      ]
+    },
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/91134341-343a-430e-03cb-4c6da692ed00/public"
+      ],
+      "planName": "早朝出発プラン（10％OFF）",
+      "detailedExplanation": "早朝のご出発を予定されている方にぴったり！<br>通常10時チェックアウトのところ、朝6時チェックアウトの早朝出発で宿泊料金が10％OFFに。<br>移動を優先したい旅やお仕事前のご滞在を、もっとお得にスマートにご利用いただけます。移動メインの日や、「翌朝はすぐ動きたい」方におすすめ！<br><br>※こちらのプランは1泊限定となります。",
+      "notes": "※特別プランのため、「公式サイト割」（200円OFF）は適用外となります。<br>※チェックアウトが朝6時を過ぎてしまった場合は、別途規定の延長料金を頂戴することがございます。",
+      "planCode": "3335",
+      "smokingCategorize": "all",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "S",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 10,
+            "membershipVacantRoom": 10
+          }
+        },
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 10,
+            "membershipVacantRoom": 10
+          }
+        },
+        {
+          "roomTypeId": "QW",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "QWK",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "T",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "TK",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        }
+      ]
+    },
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/fb0f2d14-5a8e-43ca-a655-4f2b12f50900/public"
+      ],
+      "planName": "＜12時チェックイン可能＞アーリーチェックインプラン",
+      "detailedExplanation": "チェックイン12:00、チェックアウト10:00で長時間（最大22時間）ご滞在いただけるプランです。<br><br>・無料の元気朝食サービス付き<br>・泊数：1泊限定",
+      "notes": "※当プランのご予約は、チェックイン当日の午前10時までとなっております。それ以降はご予約いただけませんので、ご了承ください。<br>※マイページからの予約変更・キャンセルは到着日当日午前10時までとなります。当日10時以降のキャンセルは直接ホテルへお電話でお願いいたします。<br>※お電話でのキャンセルの場合でも、当日10時以降はキャンセル料が発生します。<br>※特別プランのため無料宿泊券はご利用いただけません。<br>※自動チェックイン機はご利用いただけません。<br>※ご滞在中お部屋のお掃除はございません。<br>※2025年8月より以下の通りプラン名が変更されました。ご了承ください。<br>【変更前】＜最大22時間＞ロングステイ12‐翌10時<br>【変更後】＜12時チェックイン可能＞アーリーチェックインプラン",
+      "planCode": "3256",
+      "smokingCategorize": "all",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "S",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8700,
+            "membershipPrice": 8265
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "QW",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 10200,
+            "membershipPrice": 9690
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "QWK",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 10200,
+            "membershipPrice": 9690
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "T",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 11200,
+            "membershipPrice": 10640
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        },
+        {
+          "roomTypeId": "TK",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 11200,
+            "membershipPrice": 10640
+          },
+          "vacant": {
+            "generalVacantRoom": 5,
+            "membershipVacantRoom": 5
+          }
+        }
+      ]
+    },
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/aae553ee-36de-4b06-9b87-52bfa0c93900/public"
+      ],
+      "planName": "学割プラン",
+      "detailedExplanation": "学生さんなら10％OFF！【要学生証提示】<br>このプランからのご予約いただき、チェックイン時に学生証（生徒手帳含む）または在学証明書などを提示してください。<br>※学生証を卒業式で返却した場合などは、その年の卒業証書（コピーや写真も可）等などをご提示ください。<br><br>・表示価格は割引後の料金です。<br>・当プランは公式サイト割は適用外となります。<br>・1室2名以上でご利用の場合、1名様が学生証をお持ちなら対象とします。<br>・無料の元気朝食サービス付き<br>",
+      "notes": "※学生証などをご提示いただけない場合は、通常価格でのご精算となります。<br>※中学生以上が対象となります。（年齢制限はございません）<br>※未成年者のみで宿泊される場合、保護者への確認をさせていただくことがあります。",
+      "planCode": "3259",
+      "smokingCategorize": "noSmoking",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 6210,
+            "membershipPrice": 5899
+          },
+          "vacant": {
+            "generalVacantRoom": 33,
+            "membershipVacantRoom": 33
+          }
+        },
+        {
+          "roomTypeId": "PSK",
+          "roomTypeName": "プレミアムプラスルーム",
+          "roomTypeDescription": "「Refa」シャワーヘッド、ヘアドライヤー、カールアイロン、「エアウィーヴ」のベッドマット、ピロー、「SHARP」空気清浄機ワンランク上のアイテムを常設した室数限定のお部屋です。",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/a33f2520-a0f1-4276-8e09-faafc5752500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7110,
+            "membershipPrice": 6754
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          }
+        },
+        {
+          "roomTypeId": "QWK",
+          "roomTypeName": "キングダブル",
+          "roomTypeDescription": "",
+          "roomClassId": "20",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/7f9236bc-29a1-4916-16dd-48cf6fc38c00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 180,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7560,
+            "membershipPrice": 7182
+          },
+          "vacant": {
+            "generalVacantRoom": 18,
+            "membershipVacantRoom": 18
+          }
+        },
+        {
+          "roomTypeId": "TK",
+          "roomTypeName": "ツイン",
+          "roomTypeDescription": "",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/2118a022-ad8c-47fb-29a4-756456579d00/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 15,
+            "widthOfBedA": 110,
+            "numberOfBedA": 2,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 25,
+            "membershipVacantRoom": 25
+          }
+        },
+        {
+          "roomTypeId": "HTK",
+          "roomTypeName": "ハートフルツイン",
+          "roomTypeDescription": "どなたでも便利に利用できるよう設計されたユニバーサルデザインのお部屋です。",
+          "roomClassId": "30",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/ac252414-85b5-4366-7578-3e5fa6bc7500/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 25,
+            "widthOfBedA": 140,
+            "numberOfBedA": 1,
+            "widthOfBedB": 110,
+            "numberOfBedB": 1
+          },
+          "price": {
+            "generalPrice": 8460,
+            "membershipPrice": 8037
+          },
+          "vacant": {
+            "generalVacantRoom": 1,
+            "membershipVacantRoom": 1
+          }
+        }
+      ]
+    },
+    {
+      "planImages": [
+        "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/cb112cb6-795d-456b-1bdd-35c4f7458400/public"
+      ],
+      "planName": "駐車場確約!!宿泊プラン",
+      "detailedExplanation": "＜駐車場付でお車の移動を応援！＞<br>通常「先着順」となる駐車場の「確約」が付いた限定プランです。<br>駐車可能時間は15時～翌10時です。（時間外は別途料金がかかります）<br><br>※車高、車幅、長さ制限がございます。詳細はホテルにお問い合わせください。<br>※到着されましたらフロントまでお声がけください。<br>※自動チェックイン機はご利用いただけません。",
+      "notes": "※自動チェックイン機はご利用いただけません。",
+      "planCode": "3274",
+      "smokingCategorize": "all",
+      "membershipCategorize": "all",
+      "rooms": [
+        {
+          "roomTypeId": "S",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": true,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 2,
+            "membershipVacantRoom": 2
+          }
+        },
+        {
+          "roomTypeId": "SK",
+          "roomTypeName": "シングル",
+          "roomTypeDescription": "",
+          "roomClassId": "10",
+          "imageUrls": [
+            "https://imagedelivery.net/eWIoXELxFsjrCqoBwekbcw/14f4aff8-f236-45f9-61eb-70b06dda6400/public"
+          ],
+          "specs": {
+            "isSmoking": false,
+            "roomSize": 12,
+            "widthOfBedA": 150,
+            "numberOfBedA": 1,
+            "widthOfBedB": null,
+            "numberOfBedB": null
+          },
+          "price": {
+            "generalPrice": 7700,
+            "membershipPrice": 7315
+          },
+          "vacant": {
+            "generalVacantRoom": 3,
+            "membershipVacantRoom": 3
+          }
+        }
+      ]
+    }
+  ],
+  "planCodeList": [
+    {
+      "name": "スタンダードプラン",
+      "code": "9901"
+    },
+    {
+      "name": "早朝出発プラン（10％OFF）",
+      "code": "3335"
+    },
+    {
+      "name": "＜12時チェックイン可能＞アーリーチェックインプラン",
+      "code": "3256"
+    },
+    {
+      "name": "学割プラン",
+      "code": "3259"
+    },
+    {
+      "name": "駐車場確約!!宿泊プラン",
+      "code": "3274"
+    }
+  ]
+}

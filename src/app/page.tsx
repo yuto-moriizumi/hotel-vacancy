@@ -1,69 +1,130 @@
-import Image from "next/image";
+import AddForm from "./add-form";
+import { deleteWatchAction, setWatchActiveAction, checkNowAction } from "./actions";
+import { loadConfig } from "../watcher/config.mts";
+import { Store, makeNeonDb } from "../watcher/store.mts";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+const btn =
+  "rounded-md border border-zinc-300 dark:border-zinc-700 px-2.5 py-1.5 text-xs font-medium hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40";
+
+function fmt(iso: string): string {
+  return iso.replace("T", " ").slice(0, 16);
+}
+
+export default async function Home() {
+  const cfg = loadConfig();
+  const store = new Store(makeNeonDb(cfg.dbUrl));
+  let watches: Awaited<ReturnType<typeof store.listWatches>> = [];
+  let latest: Awaited<ReturnType<typeof store.latestCheckByWatch>> = [];
+  let dbError: string | null = null;
+  try {
+    watches = await store.listWatches(false);
+    latest = await store.latestCheckByWatch();
+  } catch (e) {
+    dbError = e instanceof Error ? e.message : String(e);
+  } finally {
+    store.close();
+  }
+  const byWatch = new Map(latest.map((l) => [l.watchId, l]));
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
+      <h1 className="text-2xl font-semibold tracking-tight">東横イン 空室通知</h1>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+        条件に合う空室が <b>0 → 1以上</b> になったときに通知します。監視は定期実行（GitHub Actions / cron）でポーリングされます。
+      </p>
+
+      {dbError && (
+        <p className="mt-4 rounded-md border border-red-300 bg-red-50 dark:bg-red-950/40 p-3 text-sm text-red-700 dark:text-red-300">
+          DB接続エラー: {dbError}
+        </p>
+      )}
+
+      <section className="mt-8">
+        <h2 className="text-lg font-medium">監視の登録</h2>
+        <p className="mt-1 mb-3 text-xs text-zinc-500 dark:text-zinc-400">
+          ホテルコードは公式サイトのホテル詳細URL <code>/search/detail/{'{code}'}/</code> の5桁の番号です。
+        </p>
+        <AddForm />
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-lg font-medium">監視一覧（{watches.length}件）</h2>
+        {watches.length === 0 ? (
+          <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400">まだ監視がありません。</p>
+        ) : (
+          <ul className="mt-3 space-y-3">
+            {watches.map((w) => {
+              const l = byWatch.get(w.id);
+              return (
+                <li key={w.id} className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                        w.active ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200" : "bg-zinc-200 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                      }`}
+                    >
+                      {w.active ? "監視中" : "停止中"}
+                    </span>
+                    <span className="font-medium">
+                      {w.hotel_name ?? `ホテル ${w.hotel_code}`}
+                      <span className="ml-1 text-xs text-zinc-500">{w.hotel_code}</span>
+                    </span>
+                  </div>
+                  <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
+                    {w.checkin_date}〜（{w.nights}泊） / {w.rooms}室・{w.people}名 /{" "}
+                    {w.smoking === "no_smoking" ? "禁煙" : w.smoking === "smoking" ? "喫煙" : "禁煙指定なし"}
+                    {w.notify_to && ` / 通知先: ${w.notify_to}`}
+                  </div>
+                  <div className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                    {l
+                      ? l.error
+                        ? `最終チェック: ${fmt(l.checkedAt)} — エラー: ${l.error}`
+                        : `最終チェック: ${fmt(l.checkedAt)} — 空室 ${l.totalVacant ?? "?"}室 / 最安 ${l.lowestPrice != null ? l.lowestPrice.toLocaleString() + "円" : "-"}（${l.route}）`
+                      : "未チェック"}
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {w.active && (
+                      <form action={checkNowAction}>
+                        <input type="hidden" name="id" value={w.id} />
+                        <button type="submit" className={btn}>
+                          今すぐチェック
+                        </button>
+                      </form>
+                    )}
+                    <form action={setWatchActiveAction}>
+                      <input type="hidden" name="id" value={w.id} />
+                      <input type="hidden" name="active" value={w.active ? "0" : "1"} />
+                      <button type="submit" className={btn}>
+                        {w.active ? "停止" : "再開"}
+                      </button>
+                    </form>
+                    <form action={deleteWatchAction}>
+                      <input type="hidden" name="id" value={w.id} />
+                      <button type="submit" className={`${btn} text-red-600 dark:text-red-400`}>
+                        削除
+                      </button>
+                    </form>
+                    <a
+                      className={`${btn} inline-block`}
+                      href={`https://www.toyoko-inn.com/search/detail/${w.hotel_code}/`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      公式サイトへ
+                    </a>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
+
+      <footer className="mt-12 border-t border-zinc-200 dark:border-zinc-800 pt-4 text-xs text-zinc-500 dark:text-zinc-400">
+        個人利用・非営利。公式サイトへのアクセスは低頻度（直列・間隔制限）に制限されています。詳細は README を参照。
+      </footer>
+    </main>
   );
 }
