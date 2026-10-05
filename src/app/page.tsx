@@ -1,5 +1,6 @@
 import AddForm from "./add-form";
 import { deleteWatchAction, setWatchActiveAction, checkNowAction } from "./actions";
+import { addDays } from "../watcher/fetcher.mts";
 import { loadConfig } from "../watcher/config.mts";
 import { Store, makeNeonDb } from "../watcher/store.mts";
 
@@ -69,7 +70,7 @@ export default async function Home() {
                     </span>
                     <a
                       className="font-medium underline-offset-2 hover:underline"
-                      href={`https://www.toyoko-inn.com/search/detail/${w.hotel_code}/`}
+                      href={`https://www.toyoko-inn.com/search/result/room_plan/?hotel=${encodeURIComponent(w.hotel_code)}&start=${w.checkin_date}&end=${addDays(w.checkin_date, w.nights)}&room=${w.rooms}&people=${w.people}&smoking=all&tab=roomType&sort=recommend`}
                       target="_blank"
                       rel="noreferrer"
                     >
