@@ -9,8 +9,8 @@
 
 - Node.js 22+ / TypeScript（`node` が直接実行、トランスパイル不要）
 - 保存: Neon Postgres（`@neondatabase/serverless` の HTTP SQL。`fetch` のみで依存最小）
-- 通知: console（既定）/ SMTP(nodemailer) / Webhook(Discord/Slack互換)
-- スケジューラ: GitHub Actions scheduled workflow（または手元 cron）
+- 通知: SMTP(nodemailer)。宛先は監視ごとに登録
+- スケジューラ: Vercel Cron（`/api/cron` を定期実行）
 
 ```
 src/watcher/
@@ -20,23 +20,21 @@ src/watcher/
   watcher.mts   # 1監視チェック・エッジ検知・通知・連続失敗ポリシー
   notifier.mts  # smtp メール
   config.mts    # .env.local 読み込み
-  cli.mts       # add/list/check/run/activate/deactivate
   tests/        # node:test（ネットワークなし・fixture使用）
+
+src/app/api/cron/route.ts  # Vercel Cron 用（全監視を1周）
 ```
 
 ## セットアップ
 
 ```bash
-cp .env.example .env.local   # DATABASE_URL と通知先を設定
+cp .env.example .env.local   # DATABASE_URL と通知先（SMTP_*）を設定
 npm install
-npm run watcher -- init      # テーブル作成
-npm run watcher -- add --hotel 00270 --start 2026-12-01 --nights 1 --rooms 1 --people 1 --smoking no_smoking --name "群馬伊勢崎駅前"
-npm run watcher -- list
-npm run watcher -- run       # 全アクティブ監視を1周（通知判断込み）
 npm run test:watcher         # ユニットテスト
+npm run dev                  # Web UI（監視の追加・削除・手動チェック）
 ```
 
-WSL 環境では `scripts/wslrun.sh "<cmd>"` が nvm の node へ PATH を通して実行します。
+監視の登録・削除・即時チェックはすべて Web UI（`/`）から行います。
 
 ## 動作仕様（要点）
 
@@ -48,10 +46,12 @@ WSL 環境では `scripts/wslrun.sh "<cmd>"` が nvm の node へ PATH を通し
 - 連続 `TOYOKO_MAX_FAILURES` 回の失敗でエラー通知。**403/429 は即全監視停止**（自動リトライ禁止）。
 - `TOYOKO_STOP_AFTER_NOTIFY=true` で通知後にその監視を停止（元サイト仕様の踏襲）。
 
-## GitHub Actions で動かす
+## Vercel Cron で定期チェック
 
-1. リポジトリ Secrets に `DATABASE_URL` と通知系（`TOYOKO_TO`, `SMTP_*`）を登録。
-2. `.github/workflows/toyoko-watcher.yml` が毎時1回 `node src/watcher/cli.mts run` を実行。
+1. Vercel にデプロイし、環境変数 `DATABASE_URL` と `SMTP_*`、`TOYOKO_TO` を設定。
+2. `vercel.json` の cron（毎日 1回：`0 3 * * *` UTC = JST 正午）が `/api/cron` を呼び、全アクティブ監視を1周して通知判断します。
+3. 誤実行防止に `CRON_SECRET` を設定すると、Vercel が付与する `Authorization: Bearer` を検証します。
+4. Hobby プランは cron を**1日1回**に制限しています。より高頻度にする場合は Pro プランにするか、外部 cron から `GET /api/cron`（Bearer トークン付き）を呼び出してください。チェック間隔は**60分以上**を推奨。
 
 ## 法務・マナー指針（必読）
 

@@ -32,7 +32,7 @@ export default async function Home() {
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
       <h1 className="text-2xl font-semibold tracking-tight">東横イン 空室通知</h1>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        条件に合う空室が <b>0 → 1以上</b> になったときに通知します。監視は定期実行（GitHub Actions / cron）でポーリングされます。
+        条件に合う空室が <b>0 → 1以上</b> になったときに通知します。監視は Vercel Cron（<code>/api/cron</code>）で定期ポーリングされます。
       </p>
 
       {dbError && (

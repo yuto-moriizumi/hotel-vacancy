@@ -7,8 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "watcher": "node src/watcher/cli.mts",
-    "watcher:run": "node src/watcher/cli.mts run",
     "test:watcher": "node src/watcher/tests/analyze.test.mts && node src/watcher/tests/watcher.test.mts"
   },
   "dependencies": {
