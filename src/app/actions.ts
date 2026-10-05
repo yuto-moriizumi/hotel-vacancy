@@ -41,6 +41,7 @@ export async function addWatchAction(_prev: AddFormState, formData: FormData): P
   try {
     const store = getStore();
     try {
+      await store.init(); // スキーマ確保（notify_to 追加マイグレーション含む・冪等）
       const id = await store.addWatch({ hotel_code: hotel_code, hotel_name: hotel_name, checkin_date: start, nights, rooms, people, smoking, notify_to: email });
       return { error: null, ok: true, message: `監視を登録しました（id=${id}）` };
     } finally {
