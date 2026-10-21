@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useMemo, useState } from "react";
+import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { addWatchAction, type AddFormState } from "./actions";
 import { TOYOKO_HOTELS } from "./hotels";
 
@@ -75,8 +75,13 @@ export default function AddForm() {
     message: null,
   });
 
-  // チェックイン日の初期値 = 翌日
-  const tomorrow = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
+  // チェックイン日の初期値 = 翌日（マウント後に設定。レンダリング中に Date.now を呼ばない）
+  const startRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    if (startRef.current) {
+      startRef.current.value = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
+    }
+  }, []);
 
   return (
     <form action={formAction} className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -90,7 +95,7 @@ export default function AddForm() {
         <label className={label} htmlFor="start">
           チェックイン日
         </label>
-        <input id="start" name="start" type="date" defaultValue={tomorrow} required className={input} />
+        <input id="start" ref={startRef} name="start" type="date" required className={input} />
       </div>
       <div>
         <label className={label} htmlFor="nights">
