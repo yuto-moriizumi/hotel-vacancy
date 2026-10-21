@@ -1,10 +1,13 @@
 // Postgres(Neon)-backed store over a minimal Db abstraction.
-import type { StoreLike, Watch, NewWatch, NotifyKind, Route } from "./types.mts";
+import type { StoreLike, Watch, NewWatch, NotifyKind, Route, SmokingFilter } from "./types.mts";
 import { neon } from "@neondatabase/serverless";
+
+/** neon が返す行の最小観測形状（値は実行時に検証） */
+export type QueryRow = Record<string, unknown>;
 
 /** neon() HTTP クライアントの薄いラッパ（1リクエスト=1ステートメント） */
 export interface Db {
-  query(text: string, params?: unknown[]): Promise<any[]>;
+  query(text: string, params?: unknown[]): Promise<QueryRow[]>;
 }
 
 export function makeNeonDb(connectionString: string): Db {
@@ -59,6 +62,9 @@ function toIso(v: unknown): string {
 function numOrNull(v: unknown): number | null {
   return v == null ? null : Number(v);
 }
+function strOrNull(v: unknown): string | null {
+  return v == null ? null : String(v);
+}
 
 export class Store implements StoreLike {
   private db: Db;
@@ -101,17 +107,17 @@ export class Store implements StoreLike {
     return rows.length ? this.rowToWatch(rows[0]) : undefined;
   }
 
-  private rowToWatch(r: any): Watch {
+  private rowToWatch(r: QueryRow): Watch {
     return {
       id: Number(r.id),
-      hotel_code: r.hotel_code,
-      hotel_name: r.hotel_name ?? null,
-      checkin_date: r.checkin_date,
+      hotel_code: String(r.hotel_code),
+      hotel_name: strOrNull(r.hotel_name),
+      checkin_date: String(r.checkin_date),
       nights: Number(r.nights),
       rooms: Number(r.rooms),
       people: Number(r.people),
-      smoking: r.smoking,
-      notify_to: r.notify_to ?? null,
+      smoking: r.smoking as SmokingFilter,
+      notify_to: strOrNull(r.notify_to),
       active: Boolean(r.active),
       created_at: toIso(r.created_at),
     };
@@ -196,10 +202,10 @@ export class Store implements StoreLike {
     return rows.map((r) => ({
       watchId: Number(r.watch_id),
       checkedAt: toIso(r.checked_at),
-      route: r.route ?? null,
+      route: strOrNull(r.route),
       totalVacant: numOrNull(r.total_vacant),
       lowestPrice: numOrNull(r.lowest_price),
-      error: r.error ?? null,
+      error: strOrNull(r.error),
     }));
   }
 
