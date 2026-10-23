@@ -42,6 +42,8 @@ export interface Config {
   maxConsecutiveFailures: number;
   /** 再通知の最小間隔（分） */
   refireWindowMinutes: number;
+  /** 宿泊終了日から何日経過したら削除するか（猶予日数=0は終了日の翌日に削除） */
+  expireGraceDays: number;
 }
 
 export function loadConfig(cwd = process.cwd()): Config {
@@ -81,5 +83,6 @@ export function loadConfig(cwd = process.cwd()): Config {
     delayMaxMs: num("TOYOKO_DELAY_MAX_MS", 10000),
     maxConsecutiveFailures: num("TOYOKO_MAX_FAILURES", 3),
     refireWindowMinutes: num("TOYOKO_REFIRE_MIN", 360),
+    expireGraceDays: num("TOYOKO_EXPIRE_GRACE_DAYS", 1),
   };
 }

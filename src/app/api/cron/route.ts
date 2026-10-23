@@ -24,7 +24,7 @@ export async function GET(request: Request): Promise<Response> {
   try {
     await store.init();
     const r = await runAll({ store, config: cfg });
-    return Response.json({ ok: true, checked: r.checked, blocked: r.blocked });
+    return Response.json({ ok: true, checked: r.checked, blocked: r.blocked, expiredDeleted: r.expiredDeleted });
   } catch (e) {
     return Response.json({ ok: false, error: e instanceof Error ? e.message : String(e) }, { status: 500 });
   } finally {

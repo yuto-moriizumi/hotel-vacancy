@@ -3,6 +3,7 @@ import type { StoreLike, Watch, CheckOutcome, NotifyKind } from "./types.mts";
 import type { Config } from "./config.mts";
 import { checkOnce, BlockError } from "./fetcher.mts";
 import { notify, formatVacancyMessage, formatErrorMessage } from "./notifier.mts";
+import { purgeExpiredWatches } from "./expire.mts";
 
 export type SleepFn = (ms: number) => Promise<void>;
 const realSleep: SleepFn = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -129,9 +130,10 @@ async function safeNotify(
   }
 }
 
-/** 全アクティブ監視を直列で1周（監視間 sleep+jitter、403/429 で即全停止） */
-export async function runAll(deps: WatcherDeps): Promise<{ checked: number; blocked: boolean }> {
+/** 全アクティブ監視を直列で1周（監視間 sleep+jitter、403/429 で即全停止）。冒頭で期限切れ監視を削除 */
+export async function runAll(deps: WatcherDeps): Promise<{ checked: number; blocked: boolean; expiredDeleted: number }> {
   const { store, config, sleep = realSleep, log = (m) => console.log(m) } = deps;
+  const expired = await purgeExpiredWatches({ store, config, log });
   const watches = await store.listWatches(true);
   let blocked = false;
   let checked = 0;
@@ -148,5 +150,5 @@ export async function runAll(deps: WatcherDeps): Promise<{ checked: number; bloc
       await sleep(j);
     }
   }
-  return { checked, blocked };
+  return { checked, blocked, expiredDeleted: expired.length };
 }

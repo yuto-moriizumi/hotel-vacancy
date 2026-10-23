@@ -48,6 +48,9 @@ class FakeStore implements StoreLike {
     return this.recentNotify;
   }
   async deleteWatch(): Promise<void> {}
+  async deleteExpired(): Promise<number[]> {
+    return [];
+  }
   async latestCheckByWatch(): Promise<
     { watchId: number; checkedAt: string; route: string | null; totalVacant: number | null; lowestPrice: number | null; error: string | null }[]
   > {
@@ -64,6 +67,7 @@ const cfg: Config = {
   delayMaxMs: 0,
   maxConsecutiveFailures: 3,
   refireWindowMinutes: 360,
+  expireGraceDays: 1,
 };
 
 const watch: Watch = {
