@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
-    "test:watcher": "node src/watcher/tests/analyze.test.mts && node src/watcher/tests/watcher.test.mts"
+    "test:watcher": "node src/watcher/tests/analyze.test.mts && node src/watcher/tests/watcher.test.mts && node src/watcher/tests/expire.test.mts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

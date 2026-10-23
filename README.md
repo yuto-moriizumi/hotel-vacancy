@@ -44,6 +44,7 @@ npm run dev                  # Web UI（監視の追加・削除・手動チェ�
 - 通知は「前回 0（または初回）→ 今回 1以上」のエッジのみ。再通知は `TOYOKO_REFIRE_MIN`（既定360分）で抑止。
 - 連続 `TOYOKO_MAX_FAILURES` 回の失敗でエラー通知。**403/429 は即全監視停止**（自動リトライ禁止）。
 - `TOYOKO_STOP_AFTER_NOTIFY=true` で通知後にその監視を停止（元サイト仕様の踏襲）。
+- **期限切れ監視の自動削除**: cron 実行時に宿泊終了日（チェックイン日+宿泊数）が `TOYOKO_EXPIRE_GRACE_DAYS`（既定1）日前まで遡った日付以前の監視を一括削除（checks / notifications は CASCADE）。`/api/cron` のレスポンスに `expiredDeleted`（削除件数）を含む。
 
 ## GitHub Actions で定期チェック
 

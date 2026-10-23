@@ -111,6 +111,8 @@ export interface StoreLike {
   hasRecentVacancyNotification(watchId: number, minutes: number): Promise<boolean>;
   /** 監視削除（checks/notifications は CASCADE） */
   deleteWatch(id: number): Promise<void>;
+  /** 宿泊終了日（checkin_date+nights）が cutoff（'YYYY-MM-DD'）以前の監視を一括削除。削除された id 一覧を返す（checks/notifications は CASCADE） */
+  deleteExpired(cutoff: string): Promise<number[]>;
   /** 監視ごとの最新チェック結果（1監視=1行） */
   latestCheckByWatch(): Promise<
     { watchId: number; checkedAt: string; route: string | null; totalVacant: number | null; lowestPrice: number | null; error: string | null }[]

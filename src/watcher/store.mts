@@ -192,6 +192,15 @@ export class Store implements StoreLike {
     await this.db.query(`DELETE FROM watches WHERE id=$1`, [id]);
   }
 
+  async deleteExpired(cutoff: string): Promise<number[]> {
+    // checkin_date は TEXT の 'YYYY-MM-DD'。終了日=checkin_date::date + nights（date + int = date）
+    const rows = await this.db.query(
+      `DELETE FROM watches WHERE (checkin_date::date + nights) <= $1::date RETURNING id`,
+      [cutoff],
+    );
+    return rows.map((r) => Number(r.id));
+  }
+
   async latestCheckByWatch(): Promise<
     { watchId: number; checkedAt: string; route: string | null; totalVacant: number | null; lowestPrice: number | null; error: string | null }[]
   > {
