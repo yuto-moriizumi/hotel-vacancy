@@ -23,6 +23,15 @@ function fmt(iso: string): string {
   });
 }
 
+const WEEKDAYS = ["日", "月", "火", "水", "木", "金", "土"];
+
+/** ISO日付（YYYY-MM-DD）に曜日を付ける */
+function withWeekday(iso: string): string {
+  const d = new Date(`${iso}T00:00:00Z`);
+  if (isNaN(d.getTime())) return iso;
+  return `${iso}（${WEEKDAYS[d.getUTCDay()]}）`;
+}
+
 export default async function Home() {
   const cfg = loadConfig();
   const store = new Store(makeNeonDb(cfg.dbUrl));
@@ -38,6 +47,10 @@ export default async function Home() {
     store.close();
   }
   const byWatch = new Map(latest.map((l) => [l.watchId, l]));
+
+  // フォームのチェックイン日初期値 = 翌日（サーバーで算出し、ハイドレーションずれを避ける）
+  // eslint-disable-next-line react-hooks/purity -- Server Component: リクエストごとに現在日時から算出する
+  const defaultStart = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
@@ -57,7 +70,7 @@ export default async function Home() {
         <p className="mt-1 mb-3 text-xs text-zinc-500 dark:text-zinc-400">
           対象ホテルは公式サイトのホテル一覧（<a className="underline" href="https://www.toyoko-inn.com/hotel_list/" target="_blank" rel="noreferrer">toyoko-inn.com/hotel_list</a>）から選択できます。
         </p>
-        <AddForm />
+        <AddForm defaultStart={defaultStart} />
       </section>
 
       <section className="mt-10">
@@ -89,7 +102,7 @@ export default async function Home() {
                     <span className="text-xs text-zinc-500">{w.hotel_code}</span>
                   </div>
                   <div className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">
-                    {w.checkin_date}〜（{w.nights}泊） / {w.rooms}室・{w.people}名 /{" "}
+                    {withWeekday(w.checkin_date)}〜（{w.nights}泊） / {w.rooms}室・{w.people}名 /{" "}
                     {w.smoking === "no_smoking" ? "禁煙" : w.smoking === "smoking" ? "喫煙" : "禁煙指定なし"}
                     {w.notify_to && ` / 通知先: ${w.notify_to}`}
                   </div>
