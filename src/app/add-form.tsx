@@ -13,6 +13,21 @@ function HotelCombobox() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<{ code: string; name: string } | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // フォームの自動リセット時はホテル欄だけをクリアし、他の入力内容は保持する
+  useEffect(() => {
+    const form = inputRef.current?.form;
+    if (!form) return;
+    const onReset = (e: Event) => {
+      e.preventDefault();
+      setQuery("");
+      setSelected(null);
+      setOpen(false);
+    };
+    form.addEventListener("reset", onReset);
+    return () => form.removeEventListener("reset", onReset);
+  }, []);
 
   const candidates = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -24,6 +39,7 @@ function HotelCombobox() {
   return (
     <div className="relative">
       <input
+        ref={inputRef}
         type="text"
         className={input}
         placeholder="ホテル名で検索（例: 伊勢崎）"
@@ -68,20 +84,21 @@ function HotelCombobox() {
   );
 }
 
-export default function AddForm() {
+export default function AddForm({ defaultStart }: { defaultStart: string }) {
   const [state, formAction, pending] = useActionState<AddFormState, FormData>(addWatchAction, {
     error: null,
     ok: false,
     message: null,
   });
 
-  // チェックイン日の初期値 = 翌日（マウント後に設定。レンダリング中に Date.now を呼ばない）
-  const startRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
-    if (startRef.current) {
-      startRef.current.value = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10);
-    }
-  }, []);
+  // React は action 完了後にフォームを自動リセットするため、各欄を制御コンポーネントにして
+  // 登録後も入力内容を保持する（ホテル欄は reset イベントでクリアする）
+  const [start, setStart] = useState(defaultStart);
+  const [nights, setNights] = useState("1");
+  const [rooms, setRooms] = useState("1");
+  const [people, setPeople] = useState("1");
+  const [smoking, setSmoking] = useState("all");
+  const [email, setEmail] = useState("");
 
   return (
     <form action={formAction} className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -95,31 +112,72 @@ export default function AddForm() {
         <label className={label} htmlFor="start">
           チェックイン日
         </label>
-        <input id="start" ref={startRef} name="start" type="date" required className={input} />
+        <input
+          id="start"
+          name="start"
+          type="date"
+          required
+          className={input}
+          value={start}
+          onChange={(e) => setStart(e.target.value)}
+        />
       </div>
       <div>
         <label className={label} htmlFor="nights">
           泊数
         </label>
-        <input id="nights" name="nights" type="number" min={1} max={9} defaultValue={1} className={input} />
+        <input
+          id="nights"
+          name="nights"
+          type="number"
+          min={1}
+          max={9}
+          className={input}
+          value={nights}
+          onChange={(e) => setNights(e.target.value)}
+        />
       </div>
       <div>
         <label className={label} htmlFor="rooms">
           部屋数
         </label>
-        <input id="rooms" name="rooms" type="number" min={1} max={4} defaultValue={1} className={input} />
+        <input
+          id="rooms"
+          name="rooms"
+          type="number"
+          min={1}
+          max={4}
+          className={input}
+          value={rooms}
+          onChange={(e) => setRooms(e.target.value)}
+        />
       </div>
       <div>
         <label className={label} htmlFor="people">
           人数
         </label>
-        <input id="people" name="people" type="number" min={1} max={6} defaultValue={1} className={input} />
+        <input
+          id="people"
+          name="people"
+          type="number"
+          min={1}
+          max={6}
+          className={input}
+          value={people}
+          onChange={(e) => setPeople(e.target.value)}
+        />
       </div>
       <div className="col-span-2 sm:col-span-1">
         <label className={label} htmlFor="smoking">
           喫煙希望
         </label>
-        <select id="smoking" name="smoking" defaultValue="all" className={input}>
+        <select
+          id="smoking"
+          name="smoking"
+          className={input}
+          value={smoking}
+          onChange={(e) => setSmoking(e.target.value)}
+        >
           <option value="all">指定なし</option>
           <option value="no_smoking">禁煙</option>
           <option value="smoking">喫煙</option>
@@ -130,7 +188,16 @@ export default function AddForm() {
         <label className={label} htmlFor="email">
           通知先メールアドレス
         </label>
-        <input id="email" name="email" type="email" placeholder="you@example.com" required className={input} />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+          className={input}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </div>
       <div className="col-span-2 flex items-end sm:col-span-2">
         <button
