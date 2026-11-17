@@ -11,7 +11,7 @@
     "test:watcher": "node src/watcher/tests/analyze.test.mts && node src/watcher/tests/watcher.test.mts && node src/watcher/tests/expire.test.mts"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.2.0",
+    "@neondatabase/serverless": "^1.2.1",
     "next": "16.4.6",
     "nodemailer": "^10.5.0",
     "react": "19.3.1",
